@@ -11,7 +11,7 @@ int main(void)
 {
 	char c= 'a';
 
-	while ((c < '{') (! 'e' || 'q'))
+	while (c < '{' && ! 'e' || 'q')
 	{
 		putchar (c);
 		c++;
