@@ -9,16 +9,17 @@
  */
 int main(void)
 {
-	char a = (48);
-	char b = (97);
+	int a;
+	char b;
 
-	for (a = (48); a <= (57); a++)
+	for (a = '0'; a <= '9'; a++)
 	{
 		putchar (a);
 	}
-	for (b = (97); b <= (102); b++)
+	for (b = 'a'; b <= 'f'; b++)
 	{
 		putchar (b);
 	}
-	return (0);	
+	putchar ('\n');
+	return (0);
 }
