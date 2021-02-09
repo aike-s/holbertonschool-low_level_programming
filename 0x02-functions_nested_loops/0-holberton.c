@@ -1,11 +1,10 @@
 #include "holberton.h"
 /**
- * _putchar - print a character on the screen
- *
- * Return: Always 0 (Success)
- *@c: parameter
- */
-int _putchar (char c)
+* main -´print holberton
+*
+* Return: Always 0 (Success)
+**/
+int main(void)
 {
 	_putchar ('H');
 	_putchar ('o');
