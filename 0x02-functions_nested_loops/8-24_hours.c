@@ -1,12 +1,10 @@
 #include "holberton.h"
 /**
- * _putchar - print a character on the screen
- *
- *@c: char ascii in int
- *
- * Return: on success 1
- *
- */
+* jack_bauer -prints every minute of the day of Jack Bauer, starting from 00:00 to 23:59
+*
+* Return: always void
+*
+**/
 void jack_bauer(void)
 {
 	short minutes;
