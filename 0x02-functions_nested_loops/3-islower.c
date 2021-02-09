@@ -1,9 +1,8 @@
 #include "holberton.h"
 /**
-* _putchar - print a character on the screen
+* _islower - checks for lowercase character
 *
-*@c: char ascii in int
-* 
+*@c:char ascii in in ascii
 *Return: on success 1
 **/
 int _islower(int c)
