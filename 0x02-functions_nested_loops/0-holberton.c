@@ -3,7 +3,7 @@
  * _putchar - print a character on the screen
  *
  * Return: Always 0 (Success)
- *
+ *@c: parameter
  */
 int _putchar (char c)
 {
