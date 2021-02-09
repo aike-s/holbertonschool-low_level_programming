@@ -7,7 +7,7 @@
  */
 int _putchar (char c)
 {
-	char word [10] = "Holberton\n";
+	char word [] = "Holberton\n";
 	int i;
 
 	for (i = 0; i < 10; i++)
