@@ -16,23 +16,20 @@ void times_table(void)
 			m = filas * columnas;
 			if (m <= 9)
 			{
-				_putchar(m + 48);
-				if (filas != 9)
+				if (filas > 0)
 				{
 					_putchar(',');
 					_putchar(' ');
 					_putchar(' ');
 				}
+				_putchar(m + '0');
 			}
 			else
 			{
+				_putchar(',');
+				_putchar(' ');
 				_putchar ((m / 10) + '0');
 				_putchar((m % 10) + '0');
-				if (filas != 9)
-				{
-					_putchar(',');
-					_putchar(' ');
-				}
 			}
 		}
 		_putchar('\n');
