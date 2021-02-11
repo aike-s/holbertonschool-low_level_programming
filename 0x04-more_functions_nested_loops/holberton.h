@@ -27,3 +27,6 @@ void print_square(int size);
 
 /*prints a triangle, followed by a new line*/
 void print_triangle(int size);
+
+/*writes the character c to stdout*/
+int _putchar(char c);
