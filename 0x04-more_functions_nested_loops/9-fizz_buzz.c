@@ -1,9 +1,10 @@
 #include <stdio.h>
 /**
  *main - name funtion 
+ *int
  *Return: always (0)
  **/
-int main(int)
+int main(void)
 {
 	int i;
 
@@ -14,9 +15,8 @@ int main(int)
 		else if (i % 3 == 0)
 			printf ("Fizz");
 		else
-			printf ("Buzz")
+			printf ("Buzz");
 		printf ("%d", i);
-		printf ("\n");
 	}
 	return (0);
 }
