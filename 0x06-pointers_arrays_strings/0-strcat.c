@@ -23,7 +23,7 @@ int length(char *dest)
  **/
 char *_strcat(char *dest, char *src)
 {
-	char *iter_dest = dest + length (dest);
+	char *iter_dest = dest + length(dest);
 
 	while (*src != '\0')
 	{
