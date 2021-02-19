@@ -13,7 +13,7 @@ int length(char *dest)
 		length++;
 		dest++;
 	}
-	return (length);	
+	return (length);
 }
 /**
  *_strncat - concatenates two strings
@@ -24,10 +24,10 @@ int length(char *dest)
  **/
 char *_strncat(char *dest, char *src, int n)
 {
-        const unsignet int log = length(dest);
+	unsigned int log = length(dest);
 	int i;
-	
+
 	for (i = 0; i < n; i++)
 		*(dest + i + log) = *(src + i);
-	return(dest);
+	return (dest);
 }
