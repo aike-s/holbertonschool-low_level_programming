@@ -15,13 +15,13 @@ void print_diagsums(int *a, int size)
 		for (right = 0; right < size; right++)
 		{
 			if (down == right)
-				first = (*(a + ((down * size) + right)));
-			if ((size - limit) == right)
+				first += *(a + ((down * size) + right));
+			if ((size - limit) == down)
 			{
-				last = (*(a + ((down * size) + right)));
+				last += *(a + ((down * size) + right));
 				limit++;
 			}
 		}
-		printf("%d, %d\n", first, last);
 	}
+	printf("%d, %d\n", first, last);
 }
