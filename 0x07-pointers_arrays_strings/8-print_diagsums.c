@@ -16,7 +16,7 @@ void print_diagsums(int *a, int size)
 		{
 			if (down == right)
 				first += *(a + ((down * size) + right));
-			if ((size - limit) == down)
+			if ((size - limit) == right)
 			{
 				last += *(a + ((down * size) + right));
 				limit++;
