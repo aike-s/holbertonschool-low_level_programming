@@ -1,22 +1,21 @@
 #include "holberton.h"
 /**
- *_strpbrk -  searches a string for any of a set of bytes
+ *_strstr - locates a substring
  *@haystack:string 1
  *@needle:string 2
- *Return: 
+ *Return: haystack
  **/
 char *_strstr(char *haystack, char *needle)
 {
-	unsigned int i, j = 0;
+	unsigned int i = 0;
 
-	for (i = 0; *(haystack + i) != '\0'; i++)
+	while (haystack[i] != '\0') /*recorre haystack*/
 	{
-		if (*(haystack + i) == *(needle + j))
-			for (j = 0; *(needle + j) != '\0'; j++)
-			{
-				return (haystack + i);
-				break;
-			}
+		while (*(haystack + i) && *(needle + i) && haystack[i] == needle[i])
+			i++;
+		if (needle[i] == '\0')
+			return (haystack);
+		haystack++;
 	}
 	return (0);
 }
