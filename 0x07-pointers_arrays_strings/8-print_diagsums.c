@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include <stdio.h>
 /**
  *print_diagsums - sets the value of a pointer to a char
  *@a: pointer to pointer
