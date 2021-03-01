@@ -1,4 +1,2 @@
 #!/bin/bash
-gcc -Wall -pentatic -Werror -c *.c
-ar -rc liball.a *.o
-
+gcc -Wall -pentatic -Werror -c *.c | ar -rc liball.a *.o
