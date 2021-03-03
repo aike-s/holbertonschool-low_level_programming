@@ -15,21 +15,23 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	if (width < 0 || height < 0)
 		return (NULL);
-	ptr = malloc(sizeof(int *) * height); /*espacio de memoria para punteros*/
+	/*memory space for pointers that will be used for height*/
+	ptr = malloc(sizeof(int *) * height);
 	if (ptr == NULL)
 		return (NULL);
 	for (i = 0; i < height; i++)
 	{
-		ptr[i] = malloc(sizeof(int) * width); /*este es el que reserva el tamaño para los numeros*/
+		/*this is the one that reserves the size for the numbers*/
+		ptr[i] = malloc(sizeof(int) * width);
 		if (ptr[i] == NULL)
 		{
-			return (NULL);
 			for (; i >= 0; i--)
 				free(ptr[i]);
+			free(ptr);
+			return (NULL);
 		}
 		for (j = 0; j < width; j++)
 			ptr[i][j] = 0;
 	}
-	free(ptr);
 	return (ptr);
 }
