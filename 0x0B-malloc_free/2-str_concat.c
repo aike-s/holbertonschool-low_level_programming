@@ -11,8 +11,8 @@ char *str_concat(char *s1, char *s2)
 	char *ptr;
 	int j, i;
 	char space = 0;
-	char len1 = sizeof(*s1);
-	char len2 = sizeof(*s2);
+	char len1 = sizeof(*s1) - 1;
+	char len2 = sizeof(*s2) - 1;
 
 	if (s1 == NULL)
 		s1 = 0;
