@@ -1,0 +1,1 @@
+Learinig about structures and typedef
