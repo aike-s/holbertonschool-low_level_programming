@@ -6,11 +6,13 @@
  *@name: name of the dogg
  *@age: age of the fogg
  *@owner: owner of the dogg
+ *Return: new doggy
  **/
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new_doggy;
 	int i, j;
+	char *pt_name, *pt_owner;
 	int len_name = 0, len_owner = 0;
 
 	for (i = 0; name[i]; i++)
@@ -24,19 +26,23 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	if (pt_owner == NULL)
 	{
-		free (pt_name);
+		free(pt_name);
 		return (NULL);
 	}
 	if (new_doggy == NULL)
 	{
-		free (pt_name);
-		free (pt_owner);
+		free(pt_name);
+		free(pt_owner);
 		return (NULL);
 	}
 	for (i = 0; name[i]; i++)
-		new_doggy->name[i] = name[i];
+		pt_name[i] = name[i];
+	pt_name[i] = '\0';
 	for (j = 0; owner[j]; j++)
-		new_doggy->owner[j] = owner[j];
-	(void)age;
+		pt_owner[j] = owner[j];
+	pt_owner[j] = '\0';
+	new_doggy->name = pt_name;
+	new_doggy->owner = pt_owner;
+	new_doggy->age = age;
 	return (new_doggy);
 }
