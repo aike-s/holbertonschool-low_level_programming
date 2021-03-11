@@ -21,8 +21,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		if (i < (n - 1))
 		{
 			printf("%d", va_arg(arg, int));
-			for (j = 0; separator[j]; j++)
-				printf("%c", separator[j]);
+			if (*separator != '\0')
+				for (j = 0; separator[j]; j++)
+					printf("%c", separator[j]);
 		}
 		else
 			printf("%d", va_arg(arg, int));
