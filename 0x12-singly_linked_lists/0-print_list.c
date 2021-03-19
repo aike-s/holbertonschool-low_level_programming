@@ -10,6 +10,8 @@ size_t print_list(const list_t *h)
 	size_t num;
 
 	box = h; /*give the values of h to box*/
+	if (box == NULL)
+		return (0);
 	while (box != NULL) /*while the linked list ends*/
 	{
 		if (box->str == NULL)
