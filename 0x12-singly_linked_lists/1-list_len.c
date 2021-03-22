@@ -11,7 +11,7 @@ size_t list_len(const list_t *h)
 
 	box = h;
 	if (!box)
-		return (NULL);
+		return (0);
 	while (box != NULL)
 	{
 		box = box->next;
