@@ -10,8 +10,6 @@ size_t print_listint(const listint_t *h)
 		int num = 0;
 
 		box = h; /*give the values of h to box*/
-		if (box == NULL)
-			return (0);
 		while (box != NULL) /*while the linked list ends*/
 		{
 			/*print the elements of the list*/
