@@ -30,17 +30,15 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	unsigned int i = 0;
 	unsigned int num_boxes = 0;
 
-	if (!head)
-		return (NULL);
-	/*iterates until the number of nodes in which head is located*/
-/*is equal to index*/
 	num_boxes = list_length(head);
-	if (num_boxes < index)
+	if (!head || num_boxes < index)
 		return (NULL);
-	while (head != NULL || i == index)
+	while (head != NULL)
 	{
-		head = head->next;
 		i++;
+		if (i == (index + 1))
+			return (head);
+		head = head->next;
 	}
-	return (head);
+	return (NULL);
 }
