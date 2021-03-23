@@ -35,6 +35,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	/*to make sure that the index number exists in the list*/
 	if (!head || num_box < idx)
 		return (NULL);
+	new_node = malloc(sizeof(listint_t));
+	if (new_node == NULL)
+		return (NULL);
 	while (*head != NULL)
 	{
 		i++;
