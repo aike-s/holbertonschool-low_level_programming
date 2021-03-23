@@ -6,16 +6,14 @@
  **/
 size_t print_listint(const listint_t *h)
 {
-		const listint_t *box;
 		int num = 0;
 
-		box = h; /*give the values of h to box*/
-		while (box != NULL) /*while the linked list ends*/
+		while (h != NULL) /*while the linked list ends*/
 		{
 			/*print the elements of the list*/
-			printf("%d\n", box->n);
+			printf("%d\n", h->n);
 			/*pass to the next node*/
-			box = box->next;
+			h = h->next;
 			/*and add one to num each time it advances a node*/
 			num++;
 		}
