@@ -11,9 +11,13 @@ int pop_listint(listint_t **head)
 
 	if (head == NULL)
 		return (0);
+	/*to save the following node in tmp*/
 	tmp = (*head)->next;
+	/*to save the current head data*/
 	data_node = (*head)->n;
+	/*delete the head node*/
 	free(*head);
-	(*head)->next = tmp;
+	/*update head with the next node that was stored in tmp*/
+	*head = tmp;
 	return (data_node);
 }
