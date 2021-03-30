@@ -22,7 +22,6 @@ int create_file(const char *filename, char *text_content)
 {
 	int size, fd, length;
 
-	length = _strlen(text_content);
 	if (!filename)
 		return (-1);
 	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
@@ -30,6 +29,7 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	if (text_content)
 	{
+		length = _strlen(text_content);
 		size = write(fd, text_content, length);
 		if (size < 0)
 			return (-1);

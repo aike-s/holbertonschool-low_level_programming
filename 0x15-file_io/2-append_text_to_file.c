@@ -22,14 +22,14 @@ int append_text_to_file(const char *filename, char *text_content)
 {
 	int size, fd, length;
 
-	length = _strlen(text_content);
 	if (!filename)
 		return (-1);
 	fd = open(filename, O_APPEND | O_WRONLY, 0600);
 	if (fd < 0)
 		return (-1);
-	if (length != 0)
+	if (text_content)
 	{
+		length = _strlen(text_content);
 		size = write(fd, text_content, length);
 		if (size < 0)
 			return (-1);
