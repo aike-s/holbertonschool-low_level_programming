@@ -29,6 +29,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	else
 	{
 		while (tmp->next != NULL)
+			/*here the last element of the list will be obtained*/
 			tmp = tmp->next;
 		new_node->prev = tmp;
 		tmp->next = new_node;
