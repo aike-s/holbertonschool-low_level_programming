@@ -18,8 +18,6 @@ hash_node_t *add_node(hash_node_t **head, const char *key, const char *value)
 		return (NULL);
 
 	tmp_node->key = strdup((char *)key);
-	/* quizas no estoy tomando bien el caso en el que value llegue vacio */
-	/* IMPORTANTE: aqui se hace un malloc */
 	tmp_node->value = strdup(value);
 	tmp_node->next = *head;
 	*head = tmp_node;
@@ -49,8 +47,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	/* no, it does not exist yet, so we pass the empty head as argument */
 	if (ht->array[index] == NULL)
-	{
-		ht->array[index] = add_node(&head, key, value);
+	{	ht->array[index] = add_node(&head, key, value);
 			if (ht->array[index] == NULL)
 				return (0);
 	}
@@ -63,7 +60,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		while (tmp_node != NULL)
 		{
 			if (strcmp(tmp_node->key, key) == 0)
-			{	tmp_node->value = strdup((char *)value);
+			{	free(tmp_node->value);
+				tmp_node->value = strdup((char *)value);
 				return (1);
 			}
 			tmp_node = tmp_node->next;
