@@ -27,8 +27,7 @@ unsigned int list_length(const listint_t *h)
  **/
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	unsigned int i = 0;
-	unsigned int num_boxes = 0;
+	unsigned int num_boxes = 0, i = 0;
 
 	num_boxes = list_length(head);
 	if (!head || num_boxes < index)
