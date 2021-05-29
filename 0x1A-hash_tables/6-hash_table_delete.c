@@ -9,6 +9,7 @@ void free_list(hash_node_t *head)
 	if (head == NULL)
 		return;
 	free_list(head->next);
+	/* it's necesary to free key and value, a copy  */
 	free(head->key);
 	free(head->value);
 	free(head);
@@ -25,14 +26,15 @@ void hash_table_delete(hash_table_t *ht)
 
 	if (!ht)
 		return;
-	/* MISION */
-	/* recorrer toda la tabla hasta llegar a ht->size */
+
+	/* to begin with, the hash table is traversed */
 	for (; index < ht->size; index++)
 	{
-		/* en cada index hacer free a cada nodo que ahi se encuentre */
+		/* in each index, each node found there is freed */
 		table_node = ht->array[index];
 		free_list(table_node);
 	}
-	/* liberar la tabla base */
+	/* to finish, the base table is freed */
+	free(ht->array);
 	free(ht);
 }

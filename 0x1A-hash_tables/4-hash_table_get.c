@@ -11,6 +11,9 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	unsigned long int index = 0;
 	hash_node_t *hash_table_node;
 
+	if((!key) || (!ht))
+		return (NULL);
+
     /* to start with, find the key position with key_index */
 	/* and check if something exists there or not */
 	index = key_index((const unsigned char *)key, ht->size);
