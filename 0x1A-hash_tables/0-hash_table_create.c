@@ -29,9 +29,5 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 	}
 
-	/* now each node is initialized to NULL */
-	/*for (; i < size; i++)*/
-	/* hash_table->array[i] = NULL;*/
-
 	return (hash_table);
 }
