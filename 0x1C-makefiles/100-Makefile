@@ -5,7 +5,7 @@ OBJ = $(SRC:.c=.o)
 NAME = holberton
 
 .PHONY: all clean oclean fclean rm
-all: $(OBJ) m.h
+all: m.h $(OBJ)
 	$(CC) $(SRC) -o $(NAME)
 clean:
 	$(RM) *~ $(NAME)
