@@ -1,6 +1,5 @@
 #include "search_algos.h"
-#include <stdio.h>
-#include <stdlib.h>
+
 /**
  * print_array - print the values of an array
  * @array: the array to print
@@ -20,8 +19,8 @@ void print_array(int *array, size_t start, size_t end)
 }
 
 /**
- * linear_search - searches for a value in an array of integers
- * using the Linear search algorithm
+ * binary_search - searches for a value in an array of integers
+ * using the binary search algorithm
  * @array: pointer to the first element of the array to search in
  * @size: number of elements in array
  * @value: the value to search for
@@ -31,7 +30,7 @@ int binary_search(int *array, size_t size, int value)
 {
 	size_t start = 0, middle = 0, end = (size - 1), find_middle = end;
 
-	if (!array)
+	if (array == NULL)
 		return (-1);
 
 	while (end >= start)

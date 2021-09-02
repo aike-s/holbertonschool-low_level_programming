@@ -1,7 +1,7 @@
 #ifndef SEARCH_ALGOS_H
 #define SEARCH_ALGOS_H
 
-#include <stdlib.h>
+#include <stdio.h>
 
 /*searches for a value in an array of integers*/
 /*using the Linear search algorithm*/
